@@ -1,4 +1,4 @@
-function hideHook (hook) {
+function hideHook (hook, pass) {
     function generateSecureKey(length) {
       var result           = '';
       var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+~`|}{[]:;?><,./-=';
@@ -15,8 +15,8 @@ function hideHook (hook) {
     obContainer.style.display = 'none'; // Hide the container
     obContainer.appendChild(obElement);
     document.body.appendChild(obContainer);
-    document.getElementById(obKey)[' '] = (pass) => {
-        if(pass == obKey) {
+    document.getElementById(obKey)[' '] = (password) => {
+        if(password == pass) {
           return hook
         } else {
           return {}
