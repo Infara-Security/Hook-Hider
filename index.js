@@ -1,12 +1,3 @@
-// example code
-/*
-window.hook = { secret : "yes" };
-window.key = hideHook(hook)
-
-window.getHook = () => {
-  return document.getElementById(key)[' '](key)
-}
-*/
 function hideHook (hook) {
     function generateSecureKey(length) {
       var result           = '';
@@ -19,7 +10,7 @@ function hideHook (hook) {
     }
     let obContainer = document.createElement('span');
     let obElement = document.createElement('span');
-    let obKey = generateSecureKey(32)
+    let obKey = generateSecureKey(32) // 32 characters ( change to make more complex )
     obElement.id = obKey;
     obContainer.style.display = 'none'; // Hide the container
     obContainer.appendChild(obElement);
