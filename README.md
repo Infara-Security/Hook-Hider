@@ -1,1 +1,12 @@
-Doesnt look like it would hide it very much but if you put it through an obfuscator it would be very confusing.
+# Hook-Hider
+makes patching our hooks slightly more painful
+
+## Usage :
+```
+window.hook = { secret : "yes" };
+window.key = hideHook(hook)
+
+window.getHook = () => {
+  return document.getElementById(key)[' '](key)
+}
+```
